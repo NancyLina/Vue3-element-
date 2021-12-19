@@ -4,7 +4,18 @@
             <img class="img" src="../assets/logo.png" alt="标识" />
             <span class="text"> 演示平台</span>
         </div>
-            <el-menu
+        <div class="head-right">
+          <div class="search">
+            &nbsp;
+            <el-icon style="margin-top:8px;"><search /></el-icon>
+            &nbsp;
+            <input class="input-search" v-model="input" placeholder="搜索" />
+          </div>
+          <div class="blank"> 
+            
+          </div>
+        </div>
+            <!-- <el-menu
             :default-active="activeIndex"
             class="el-menu-demo"
             mode="horizontal"
@@ -12,7 +23,7 @@
         >
                 <el-menu-item index="1">Processing Center</el-menu-item>
                 <el-menu-item index="2">Workspace</el-menu-item>
-                <el-menu-item index="3">Orders</el-menu-item>
+                <el-menu-item index="3">Orders</el-menu-item> -->
             <!-- <el-sub-menu index="2">
             <template #title>Workspace</template> -->
             <!-- <el-menu-item index="2-1">item one</el-menu-item> -->
@@ -22,7 +33,7 @@
             </el-sub-menu> -->
             <!-- </el-sub-menu> -->
             <!-- <el-menu-item index="3" disabled>Info</el-menu-item> -->
-        </el-menu>
+        <!-- </el-menu> -->
     
 </template>
 
@@ -44,6 +55,7 @@ export default defineComponent({
     return {
       activeIndex,
       handleSelect,
+      input: ref(''),
     }
   },
 })
@@ -73,6 +85,26 @@ export default defineComponent({
     font-size: 18px;
     position: absolute;
     top:5px;
+}
+.head-right{
+  float:right;
+}
+.search{
+  display: inline-block;
+  border: gray 1px solid;
+  border-radius: 10px;
+  margin-top: 15px;
+  height:30px;
+  line-height: 30px;
+}
+.input-search{
+  border: none;
+  /* 重点是 outline: none;  */
+  outline: none;
+}
+.blank{
+  display: inline-block;
+  width: 40px;
 }
 
 </style>

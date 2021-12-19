@@ -12,6 +12,7 @@
     "serve:prjA": "vite preview --config vite.config.prjA.ts"
   },
   "dependencies": {
+    "@element-plus/icons": "0.0.11",
     "axios": "^0.24.0",
     "element-plus": "^1.2.0-beta.5",
     "postcss-px2rem-exclude": "^0.0.6",

@@ -4,6 +4,7 @@ import MainPage from '@/views/MainPage.vue';
 import Nav1 from '@/views/Nav1.vue';
 import Nav2 from '@/views/Nav2.vue';
 import HelloWorld from '@/views/HelloWorld.vue'
+import UpLoad from '../components/UpLoad.vue'
 // 定义一个路由数组
 
 const routes: Array<RouteRecordRaw> = [
@@ -18,9 +19,9 @@ const routes: Array<RouteRecordRaw> = [
         component: MainPage,
         children:[
             {
-                path: 'nav1',
-                name: 'nav1',
-                component: Nav1,
+                path: 'upload',
+                name: 'upload',
+                component: UpLoad,
             },
             {
                 path: 'nav2',
